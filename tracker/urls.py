@@ -1,10 +1,12 @@
 from django.contrib import admin
 from django.urls import path,include
-from .views import home,ArticleDetailView
+from .views import home,ArticleDetailView,ProductListView
 
 urlpatterns = [
     path('',home.as_view(),name='home'),
     path('article/<int:pk>/',ArticleDetailView.as_view(), name='article-detail'),
+    path('products/',ProductListView.as_view(), name='product-list'),
+
     # path('artical/<int:pk>/', ArticalDetailView.as_view(), name='artical-detail'),
     # path('food/',FoodListView.as_view(),name='food-list'),
     # path('meal/',MealListView.as_view(),name='meal-list'),
