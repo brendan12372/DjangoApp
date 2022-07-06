@@ -37,10 +37,10 @@ class  Article(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=300)
-    
+    # articles2 = models.ManyToManyField(Article, related_name='articles',null=True, blank=True)
     image = models.ImageField(default='default.jpg', upload_to='product_pics')
     price = models.FloatField()
-    articles=models.ForeignKey(Article, related_name='articles',on_delete=models.CASCADE,blank=True,null=True)
+    articles=models.ManyToManyField(Article, related_name='articles',blank=True,null=True)
     link= models.CharField(max_length=300)
     discription=models.TextField(max_length=2000)
     def __str__(self):
