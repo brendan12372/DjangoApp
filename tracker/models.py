@@ -40,7 +40,7 @@ class Product(models.Model):
     # articles2 = models.ManyToManyField(Article, related_name='articles',null=True, blank=True)
     image = models.ImageField(default='default.jpg', upload_to='product_pics')
     price = models.FloatField()
-    articles=models.ManyToManyField(Article, related_name='articles',blank=True,null=True)
+    articles=models.ManyToManyField(Article, related_name='articles',blank=True)
     link= models.CharField(max_length=300)
     discription=models.TextField(max_length=2000)
     def __str__(self):
