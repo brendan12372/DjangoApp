@@ -27,7 +27,15 @@ class ArticleDetailView(DetailView):
 
     model = Article
 
+    if model.title=='What is Autophagy?':
+        template_name='tracker/article_detail2.html'
+
     def get_context_data(self, **kwargs):
+        print(self.object.title)
+        if self.object.title=='What is Autophagy?':
+            print('test')
+            self.template_name='tracker/article_detail2.html'
+
         context = super(ArticleDetailView, self).get_context_data(**kwargs)
         context['Products'] = Product.objects.filter(articles=self.get_object())
         return context

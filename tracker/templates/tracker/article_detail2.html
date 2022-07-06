@@ -4,7 +4,10 @@
   <div class="card-body">
     <h5 class="card-title">{{ article.title }}</h5>
     <p class="card-text">{{article.subtitle}}</p>
-    <ol>
+    <h5 class="card-subtitle text-muted text-capitalize">
+      {{article.subtitle2}}
+    </h5>
+    <ul>
       <li>
         <p>{{article.text1}}</p>
       </li>
@@ -17,31 +20,31 @@
       <li>
         <p>{{article.text4}}</p>
       </li>
-    </ol>
-    <b>what to avoid</b>
-    <ul>
+
       <li>
         <p>{{article.text5}}</p>
       </li>
       <li>
         <p>{{article.text6}}</p>
       </li>
+      <li>
+        <p>{{article.text7}}</p>
+      </li>
     </ul>
-    <p class="card-text">{{article.text7}}</p>
+    <p>{{article.text8}}</p>
   </div>
 </div>
 <div class="row">
-{% for p in Products %}
-<div class="card m-2" style="width: 18rem;">
-  <div class="card-body">
-      <img  class="card-img-top"  src="{{p.image.url}}" alt="">
-    <h5 class="card-title">{{ p.name }}</h5>
-    
+  {% for p in Products %}
+  <div class="card m-2" style="width: 18rem">
+    <div class="card-body">
+      <img class="card-img-top" src="{{p.image.url}}" alt="" />
+      <h5 class="card-title">{{ p.name }}</h5>
 
-    <p class="card-text">{{p.discription| truncatewords:20}}</p>
-    <a class="btn btn-primary" href="{{p.link}}">Amazon ${{p.price}}</a>
+      <p class="card-text">{{p.discription| truncatewords:20}}</p>
+      <a class="btn btn-primary" href="{{p.link}}">Amazon ${{p.price}}</a>
+    </div>
   </div>
-</div>
-{% endfor %}
+  {% endfor %}
 </div>
 {% endblock %}
