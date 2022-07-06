@@ -27,6 +27,11 @@ class  Article(models.Model):
     text8=models.TextField(max_length=1000,null=True, blank=True)
     text9=models.TextField(max_length=1000,null=True, blank=True)
     text10=models.TextField(max_length=1000,null=True, blank=True)
+    text11=models.TextField(max_length=1000, null=True, blank=True)
+    text12=models.TextField(max_length=1000,null=True, blank=True)
+    text13=models.TextField(max_length=1000,null=True, blank=True)
+    text14=models.TextField(max_length=1000,null=True, blank=True)
+    text15=models.TextField(max_length=1000,null=True, blank=True)
     def __str__(self):
       return self.title
 
