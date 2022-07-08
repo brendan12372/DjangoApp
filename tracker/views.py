@@ -34,8 +34,11 @@ class ArticleDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         print(self.object.title)
+        if self.object.title=='What is Intermittent fasting?':
+            print('fast')
+            self.template_name='tracker/fasting.html'
         if self.object.title=='What is Autophagy?':
-            print('test')
+            print('fast')
             self.template_name='tracker/article_detail2.html'
         if self.object.title== "What is a Ketogenic Diet?":
             print('test')

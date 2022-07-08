@@ -1,6 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -17,19 +20,27 @@
       crossorigin="anonymous"
     ></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-233584018-1">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-233584018-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'UA-233584018-1');
-</script>
+      gtag("config", "UA-233584018-1");
+    </script>
 
-    <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'tracker/css/main.css' %}"
+    />
   </head>
   <body>
     <main>
@@ -54,7 +65,12 @@
           <div class="collapse navbar-collapse" id="navbarsExample02">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="{% url 'home' %}"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'product-list' %}">Products</a>
@@ -63,10 +79,11 @@
           </div>
         </div>
       </nav>
-      <div class="container mt-5 pt-3">
-      {% block body %}{% endblock body %}
+      <div id="xxx" class="container mt-5 pt-3">
+        
+        {% block body %}{% endblock body %}
       </div>
     </main>
-    <script src="index.js"></script>
+    <script src="{% static 'tracker/js/index.js' %}"></script>
   </body>
 </html>

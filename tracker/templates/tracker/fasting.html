@@ -3,33 +3,13 @@
 <div class="card m-2 bg-secondary" style="">
   <div class="card-body">
     <h3 class="card-title text-capitalize">{{ article.title }}</h3>
-    <p class="card-text">{{article.subtitle}}</p>
-    <ol>
-      <li>
-        <p>{{article.text1}}</p>
-      </li>
-      <li>
-        <p>{{article.text2}}</p>
-      </li>
-      <li>
-        <p>{{article.text3}}</p>
-      </li>
-      <li>
-        <p>{{article.text4}}</p>
-      </li>
+  <div id="ketoneChart" style=""></div>
+<div id="hghChart" style=""></div>
+<div id="macroChart" style=""></div>
+    <img  class="card-img-top"  src="{{article.image.url}}" alt="">
 
-    </ol>
-    <b class="text-capitalize">what to avoid</b>
-    <ul>
-      <li>
-        <p>{{article.text5}}</p>
-      </li>
-
-      <li>
-        <p>{{article.text6}}</p>
-      </li>
-    </ul>
     <p class="card-text">{{article.text7}}</p>
+
   </div>
 </div>
 <div class="row">
