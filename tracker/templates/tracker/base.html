@@ -1,4 +1,5 @@
 {% load static %}
+{% load humanize %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -73,6 +74,14 @@
                 >
               </li>
               <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="{% url 'food-list' %}"
+                  >Foods</a
+                >
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="{% url 'product-list' %}">Products</a>
               </li>
             </ul>
@@ -85,5 +94,6 @@
       </div>
     </main>
     <script src="{% static 'tracker/js/index.js' %}"></script>
+      
   </body>
 </html>

@@ -1,7 +1,17 @@
 from django.shortcuts import render
-from .models import Article,Product
+from .models import Article,Product,Food
 from django.utils import timezone
 from django.views.generic import DetailView,ListView
+
+class FoodDetailView(DetailView):
+
+    model = Food
+    
+
+class FoodListView(ListView):
+
+    model = Food
+    paginate_by = 100  # if pagination is desired
 
 class home(ListView):
 
@@ -38,11 +48,10 @@ class ArticleDetailView(DetailView):
             print('fast')
             self.template_name='tracker/fasting.html'
         if self.object.title=='What is Autophagy?':
-            print('fast')
-            self.template_name='tracker/article_detail2.html'
+            self.template_name='tracker/autophagy.html'
         if self.object.title== "What is a Ketogenic Diet?":
             print('test')
-            self.template_name='tracker/article_detail3.html'
+            self.template_name='tracker/keto.html'
        
 
         context = super(ArticleDetailView, self).get_context_data(**kwargs)

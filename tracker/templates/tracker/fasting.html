@@ -2,14 +2,36 @@
 
 <div class="card m-2 bg-secondary" style="">
   <div class="card-body">
-    <h3 class="card-title text-capitalize">{{ article.title }}</h3>
-  <div id="ketoneChart" style=""></div>
-<div id="hghChart" style=""></div>
-<div id="macroChart" style=""></div>
-    <img  class="card-img-top"  src="{{article.image.url}}" alt="">
+    <h1 class="card-title text-capitalize">{{ article.title }}</h1>
+        <p class="card-text">{{article.subtitle}}</p>
 
-    <p class="card-text">{{article.text7}}</p>
 
+
+<h4 class="card-subtitle text-capitalize">{{ article.subtitle2 }}</h4>
+ <ul>
+  <li>{{article.text1}}</li>
+  <li>{{article.text2}}</li>
+  <li>{{article.text3}}</li>
+  <li>{{article.text5}}</li>
+  <li>{{article.text6}}</li>
+  <li>{{article.text9}}</li>
+  <li>{{article.text10}}</li>
+  <li>{{article.text11}}</li>
+  <li>{{article.text12}}</li>
+</ul> 
+<div id="keytoneChart"></div>
+
+
+
+<h4 class="card-subtitle text-capitalize">{{ article.subtitle3 }}</h4>
+ <ul>
+
+  <li>{{article.text7}}</li>
+  <li>{{article.text8}}</li>
+  
+
+</ul> 
+<p>{{article.text4}}</p>
   </div>
 </div>
 <div class="row">

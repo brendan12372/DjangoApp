@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'tracker',
     'django.contrib.humanize',
+    
     'crispy_forms',
     'django_extensions',
     'django.contrib.contenttypes',
@@ -127,7 +128,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ( os.path.join('static'), )
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 

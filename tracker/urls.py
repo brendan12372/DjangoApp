@@ -1,11 +1,13 @@
 from django.contrib import admin
 from django.urls import path,include
-from .views import home,ArticleDetailView,ProductListView
+from .views import home,ArticleDetailView,ProductListView,FoodDetailView,FoodListView
 
 urlpatterns = [
     path('',home.as_view(),name='home'),
-    path('article/<int:pk>/',ArticleDetailView.as_view(), name='article-detail'),
+    path('article/<slug:slug>/',ArticleDetailView.as_view(), name='article-detail'),
     path('products/',ProductListView.as_view(), name='product-list'),
+    path("food", FoodListView.as_view(), name="food-list"),
+    path("food/<slug:slug>", FoodDetailView.as_view(), name="food-detail"),  # new
 
     # path('artical/<int:pk>/', ArticalDetailView.as_view(), name='artical-detail'),
     # path('food/',FoodListView.as_view(),name='food-list'),
